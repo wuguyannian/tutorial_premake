@@ -32,10 +32,7 @@
 *.app
 
 #vs 2019
-*.filters
-*.vcxproj
-*.user
-*.sln
+
 
 .vs/
 .vscode/
