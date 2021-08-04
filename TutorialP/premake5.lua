@@ -30,30 +30,28 @@ project "LibUtial"
     targetdir ("../bin/" .. outputdir)
 	objdir ("../bin_obj/" .. outputdir)
 
-
     files
     {
-        "./**.h",       -- 当前文件夹所有.h文件
-        "./**.cpp"      -- 当前文件夹所有.cpp文件
+        "%{prj.name}/**.h",       -- 当前文件夹所有.h文件
+        "%{prj.name}/**.cpp"      -- 当前文件夹所有.cpp文件
     }
 
-    
-
 project "Tutorial"      -- 项目
+    location "Tutorial"
+    links "LibUtial"
     kind "ConsoleApp"   -- 控制台应用
     language "C++"
 
     targetdir ("../bin/" .. outputdir)
     objdir ("../bin_obj/" .. outputdir)
-    
+
     includedirs
     {
         "LibUtial"
     }
 
-
     files
     {
-        "./**.cpp"      -- 当前文件夹所有.cpp文件
+        "%{prj.name}/**.cpp"      -- 当前文件夹所有.cpp文件
     }
 
