@@ -24,6 +24,7 @@ workspace "Tutorial" -- 解决方案
 outputdir = "%{cfg.platform}%{cfg.buildcfg}/%{prj.name}"
 
 project "LibUtial"
+    location "LibUtial"
     kind "StaticLib"    -- 静态库
     language "C++"
 
